@@ -9,7 +9,7 @@
 
 In this exercise we will write a method and set of tests in TDD fashion which calculates a hand's BlackJack score.
 
-In the card BlackJack each card has a value.
+In the card game BlackJack each card has a value.
 -  Number cards (2-10) carry the card's numeric value.
 -  Face cards on the other hand ("Jack", "Queen", "King") have a value of 10.
 -  Aces (1) can have a value of either 1 or 11, whichever will get the hand closest to 21 without going over.
@@ -33,7 +33,7 @@ Independently, identify some of the following tests cases
 
 ### Part 2:  Identifying Edge & Nominal Cases
 
-Your classroom instructor will provide instructions on how to complete the following steps.
+In class, you will:
 1. Review the test cases you identified in Part 1
 1. Determine how you would test these cases
 
