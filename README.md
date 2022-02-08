@@ -24,7 +24,7 @@ When a hand's score is greater than 21, the hand is a **bust** and the player au
 
 ### Part 1:  Identifying Edge & Nominal Cases
 
-Independently, identify some of the following tests cases
+Identify some of the following tests cases
 
 - At least two nominal cases
 - At least three edge cases
@@ -36,6 +36,7 @@ Independently, identify some of the following tests cases
 In class, you will:
 1. Review the test cases you identified in Part 1
 1. Determine how you would test these cases
+
 
 ### Part 3:  Calculating a Score
 
