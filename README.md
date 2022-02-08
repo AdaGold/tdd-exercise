@@ -1,10 +1,15 @@
 # TDD Exercise
 
-In this exercise you will write a method and set of tests in TDD fashion which calculates a hand's BlackJack score.
+## Learning Goals 
+- Practice identifying test cases
+- Practice writing tests with pytest
+- Practice the Test Driven Development (TDD) programming workflow
 
 ## About BlackJack
 
-In the card BlackJack each card has a value.
+In this exercise we will write a method and set of tests in TDD fashion which calculates a hand's BlackJack score.
+
+In the card game BlackJack each card has a value.
 -  Number cards (2-10) carry the card's numeric value.
 -  Face cards on the other hand ("Jack", "Queen", "King") have a value of 10.
 -  Aces (1) can have a value of either 1 or 11, whichever will get the hand closest to 21 without going over.
@@ -15,22 +20,32 @@ A hand, an array of Card values, must be between 2 and 5 items inclusive.
 
 When a hand's score is greater than 21, the hand is a **bust** and the player automatically loses.
 
-## Part 1:  Identifying Edge & Nominal Cases
+## Problem Set
 
-With a partner talk through the following questions and write down answers.
+### Part 1:  Identifying Edge & Nominal Cases
 
-1.  What would be two nominal cases?
-2.  What edge cases can you determine?  Name at least 3.
-3.  How would you **test** these cases?
+Independently, identify some of the following tests cases
 
-When you finish talk with another pair and walk through your answers.
+- At least two nominal cases
+- At least three edge cases
 
-## Part 2:  Calculating a Score
+## Classroom activity
 
-You will write a method called:  `blackjack_score` which take an array of card values and returns the blackjack score.  The card values can be any of the following, number values 2-10, "King", "Queen", "Jack", and "Ace".  If the array contains an invalid card value or the total exceeds 21, raise an `ArgumentError`.  For example `blackjack_score(["Ace", 5, 3])` will return 19.  You should also raise an error if the hand contains more than 5 cards.
+### Part 2:  Identifying Edge & Nominal Cases
 
-In this exercise you will complete the given tests in `test/blackjack_score_test.rb` and updating the `blackjack_score` method in `lib/blackjack_score.rb` to make it pass.
+In class, you will:
+1. Review the test cases you identified in Part 1
+1. Determine how you would test these cases
+
+### Part 3:  Calculating a Score
+
+We will write a method called:  `blackjack_score` which take a list of card values and returns the blackjack score.  The card values can be any of the following, number values 2-10, "King", "Queen", "Jack", and "Ace". For example `blackjack_score(["Ace", 5, 3])` will return 19. If the list contains an invalid card value or the hand contains more than 5 cards, return `"Invalid"`. If the total exceeds 21, return `"Bust"`.  
+Note: These last two cases may be better handled by raising an exception (as opposed to returning `"Invalid"` and `"Bust"`).We can consider that when we learn more about raising exception.
+
+In this exercise we will complete the given tests in `test/test_blacjack_score.py` and updating the `blackjack_score` function in `blackkack/blackjack_score.py` to make it pass.
 
 Step 1:  Complete the given test
 Step 2:  Update `blackjack_score` to pass the test
 Step 3:  Move to the next test
+
+We will likely not have time to write every test and implement every piece of code to implement a complete `blackjack_score` function. Keep in mind that the learning goals for this activity are to practice identifying test cases, practice writing tests with pytest, and practice working in a TDD fashion.
