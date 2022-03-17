@@ -82,6 +82,8 @@ def test_returns_bust_for_scores_over_21():
   # Assert
   assert score == "Bust"
 
+#*****Consider the following two edge test cases only after you have implemented code to pass all of the tests above*****
+@pytest.mark.skip(reason="logic not yet implemented")
 def test_returns_12_for_ace_ace_king():
     # Arrange
   hand = ['Ace', 'Ace', 'King']
@@ -92,6 +94,7 @@ def test_returns_12_for_ace_ace_king():
   # Assert
   assert score == 12
 
+@pytest.mark.skip(reason="logic not yet implemented")
 def test_returns_14_for_ace_ace_ace_ace():
     # Arrange
   hand = ['Ace', 'Ace', 'Ace', 'Ace']
