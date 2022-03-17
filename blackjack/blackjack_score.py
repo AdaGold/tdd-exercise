@@ -6,6 +6,8 @@ def blackjack_score(hand):
 
     if len(hand) > 5:
         return "Invalid"
+
+    num_aces = 0
     
     for card in hand:
         if card not in VALID_CARDS:
@@ -13,15 +15,23 @@ def blackjack_score(hand):
         elif card in ['Jack', 'Queen', 'King']:
             score += 10
         elif card == "Ace":
-            if score <= 10:
-                score += 11
-            else:
-                score += 1
+            num_aces += 1
         else:
             score += card
 
         if score > 21:
             return "Bust"
+    
+    # at most 1 ace can be 11, the rest must be 1
+    if num_aces > 0:
+        temp_score  = score + 11 + (num_aces - 1)
+        if temp_score > 21:
+            score = score + num_aces
+        else:
+            score = temp_score
 
+    if score > 21:
+        return "Bust"  
+    
     return score
 

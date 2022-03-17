@@ -82,5 +82,22 @@ def test_returns_bust_for_scores_over_21():
   # Assert
   assert score == "Bust"
 
+def test_returns_12_for_ace_ace_king():
+    # Arrange
+  hand = ['Ace', 'Ace', 'King']
 
+  # Act
+  score = blackjack_score(hand)
 
+  # Assert
+  assert score == 12
+
+def test_returns_14_for_ace_ace_ace_ace():
+    # Arrange
+  hand = ['Ace', 'Ace', 'Ace', 'Ace']
+
+  # Act
+  score = blackjack_score(hand)
+
+  # Assert
+  assert score == 14
